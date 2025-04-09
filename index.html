@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas | método Arrays videoaula</title>
+</head>
+<body>
+    <h1>LISTA DE TAREFAS</h1>
+    <ul></ul>
+    <button onclick="addtarefa()">Qual a próxima tarefa?</button>
+    <input></input>
+    <script>
+        //estado da aplicação
+        const listatarefas = []
+
+        //alteradores de estado da aplicação
+        function addtarefa()    {
+            
+            const input = document.querySelector("input")
+            const novatarefa = input.value
+            listatarefas.push(novatarefa)
+            console.log(listatarefas)
+            input.value = ""
+            render()
+        }
+        //mostrar estado na tela / DOM / HTML
+        function render()   {
+            const ul = document.querySelector("ul")
+            console.log(ul)
+            ul.innerHTML = null
+            listatarefas.forEach(function(novatarefa)   {
+                const li = document.createElement("li")
+                console.log(li)
+                li.innerText = novatarefa
+                ul.appendChild(li)
+            })
+        }
+
+        render()
+
+            
+            //console.log(listatarefas.length)
+            
+            
+        
+    </script>
+</body>
+</html>
