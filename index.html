@@ -5,13 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas | método Arrays videoaula</title>
     <style>
+        *   {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body    {
+            border: 10px solid blue;
+            min-height:100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background: blue;
+        }
+        main    {
+            flex: auto;
+            background: aliceblue;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        main ul {
+            padding: 0;
+            list-style: none;
+        }
+        main li {
+            border-bottom: 1px solid blue;
+            padding: 5px 0;
+            font-size: 20px;
+        }
+        header  {
+            color: white;   
+            text-align: center;
+            padding: 15px 0;
+        }
+        footer  {
+            margin-top: 5px solid blue;
+            display: flex;
+            padding: 5px;
+        }
+        footer input    {
+            flex: auto;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        footer button   {
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>LISTA DE TAREFAS</h1>
-    <button onclick="addtarefa()">Qual a próxima tarefa?</button>
-    <input></input>
-    <ul></ul>
+    <header>
+        <h1>LISTA DE TAREFAS</h1>
+    </header>
+    <main>
+        <ul></ul>
+    </main>
+    <footer>
+        <input></input>
+        <button onclick="addtarefa()">Qual a próxima tarefa?</button>
+    </footer>
+    
     <script>
         
         //estado da aplicação
